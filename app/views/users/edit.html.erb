@@ -3,7 +3,6 @@
     <% if @user.errors.any? %>
       <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
         <ul>
           <% @user.errors.full_messages.each do |message| %>
             <li><%= message %></li>
@@ -11,7 +10,6 @@
         </ul>
       </div>
     <% end %>
-
   <h1 class="users_edit_h1">プロフィール編集</h1>
   <div class="users_edit_div">
     <table class="field">
