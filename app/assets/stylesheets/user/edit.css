@@ -6,6 +6,16 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.parent {
+  text-align: center;
+}
+
+.text {
+  display: inline-block;
+  width: 100px;
+}
+
 .user_edit_button {
   padding-top: 20px;
 }

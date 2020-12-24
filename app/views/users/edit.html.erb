@@ -18,8 +18,8 @@
         <th><%= form.text_field :name %></th>
       </tr>
       <tr>
-      <th><%= form.label :email %></th>
-      <th><%= form.text_field :email %></th>
+        <th><%= form.label :email %></th>
+        <th><%= form.text_field :email %></th>
       </tr>
       <tr>
         <th><%= form.label :password %></th>
@@ -35,11 +35,10 @@
       </tr>
 
       <tr class="actions">
-        <th></th>
-        <th><%= form.submit %></th>
+        <th><br><%= form.submit %></th>
       </tr>
     </table>
-  <% end %>
+      <% end %>
 
   <div class="user_edit_button">
     <button><%= link_to "投稿一覧", pictures_path %></button>
