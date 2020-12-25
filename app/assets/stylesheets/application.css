@@ -6,9 +6,9 @@
  header {
    height: 75px;
    width: 100%;
-   position: absolute; top:0px;
    background-color: #948BDB;
- }
+   position: absolute; top:0px;
+  }
 
  .application_body {
    height: 0px;
@@ -23,5 +23,5 @@
    height: 50px;
    width: 100%;
    background-color: green;
-   position: absolute; bottom:0px;
+   position: absolute; bottom:-180px;
  }

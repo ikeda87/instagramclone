@@ -4,7 +4,6 @@ class CreatePictures < ActiveRecord::Migration[5.2]
       t.text :image
       t.text :content
       t.text :profile_image
-
       t.timestamps
     end
   end

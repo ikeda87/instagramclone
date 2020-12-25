@@ -1,4 +1,4 @@
 <h1>お問い合わせが完了しました！</h1>
-<h2>name: <%= image_tag @picture.image.url %></h2>
+<h2>名前:<%= image_tag @picture.image.url if @picture.image.present? %></h2>
 <h3>お問い合わせ内容の確認</h3>
 <p>content: <%= @picture.content %></p>

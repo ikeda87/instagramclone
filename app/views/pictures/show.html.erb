@@ -1,5 +1,5 @@
 <p class="picture_show_p1">
-  <%= image_tag @picture.image.url %>
+  <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
 </p>
 
 <p>
