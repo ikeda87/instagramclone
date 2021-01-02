@@ -13,7 +13,7 @@
       <tr>
         <td class="picuture_index_td"><%= picture.user.name %></td>
         <td class="picuture_index_td"><%= picture.content %></td>
-        <td class="picuture_index_td"><%= image_tag picture.image.url %></td>
+
         <td><button class="picture_index_button"><%= link_to '詳細', picture %></button></td>
         <% if current_user.id == picture.user_id %>
         <td><button class="picture_index_button"><%= link_to '編集', edit_picture_path(picture) %></button></td>
