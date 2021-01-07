@@ -1,16 +1,7 @@
-<p class="picture_show_p1">
-  <%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %>
-</p>
-
-<p>
-  <strong>投稿者:</strong>
-  <%= @picture.user.name %>
-</p>
-
-<p>
-  <strong>内容:</strong>
-  <%= @picture.content %>
-</p>
+<h1 class="picture_show_h1">詳細</h1><br>
+<p><%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %></p>
+<p><strong>投稿者:</strong><%= @picture.user.name %></p>
+<p><strong>内容:</strong><%= @picture.content %></p>
 
 <div>
 <% unless @picture.user_id == current_user.id %>
@@ -21,8 +12,7 @@
   <% end %>
 <% end %>
 </div>
-
 <button><%= link_to '投稿一覧', pictures_path %></button>
 <% if current_user.id == @picture.user_id %>
-  <button><%= link_to '編集', edit_picture_path(@picture) %></button>
+<button><%= link_to '編集', edit_picture_path(@picture) %></button>
 <% end %>
