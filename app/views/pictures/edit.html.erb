@@ -1,4 +1,4 @@
-<h1 class="picture_edit_h1">投稿/画像の編集</h1>
+<h1 class="picture_edit_h1">画像の編集</h1>
 <p><%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %></p>
 <%= render partial: "form", locals: { picture: @picture } %>
 <button><%= link_to '詳細', @picture %></button>
