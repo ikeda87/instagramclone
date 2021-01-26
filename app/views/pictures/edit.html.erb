@@ -2,4 +2,4 @@
 <p><%= image_tag(@picture.image.url) if @picture.image && @picture.image.url %></p>
 <%= render partial: "form", locals: { picture: @picture } %>
 <button><%= link_to '詳細', @picture %></button>
-<button><%= link_to '戻る', pictures_path %></button>
+<button><%= link_to '一覧に戻る', pictures_path %></button>
