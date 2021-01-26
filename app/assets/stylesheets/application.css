@@ -10,6 +10,10 @@
    position: absolute; top:0px;
   }
 
+  body {
+    background-color: #C0C0C0;
+  }
+
   .sign_up-login-form {
     background-color: #00ffCC;
     word-wrap: break-word;
