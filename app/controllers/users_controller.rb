@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :check_current_user, only: [:update, :destroy]
 
   def index
     @users = User.all
@@ -59,5 +60,12 @@ class UsersController < ApplicationController
 
   def update_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation, :profile_image)
+  end
+
+  def check_current_user
+  user = User.find(params[:id])
+  if user.id != params[:id].to_i
+    redirect_to new_user_path, notice: "この操作はできません"
+  end
   end
 end

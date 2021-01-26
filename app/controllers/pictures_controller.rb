@@ -1,8 +1,9 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :update, :edit, :destroy, :current_user]
+  before_action :check_current_user, only: [:edit, :update, :destroy]
 
   def index
-    @pictures = Picture.all
+    @pictures = Picture.all.order(created_at: "desc")
   end
 
   def show
@@ -64,4 +65,10 @@ class PicturesController < ApplicationController
     params.require(:picture).permit(:image, :image_cache, :content)
   end
 
+  def check_current_user
+    user = User.find(current_user.id)
+    if user.id != current_user.id
+      redirect_to blogs_path, notice: "この操作はできません"
+    end
+  end
 end
