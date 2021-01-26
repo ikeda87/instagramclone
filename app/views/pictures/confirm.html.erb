@@ -5,5 +5,7 @@
   <%= form.hidden_field :content %>
   <p>本文:<%= @picture.content %></p>
   <%= form.submit  "登録する" %>
-  <%= form.submit "戻る", name: 'back' %>
+  <br><br>
+  <%= link_to "一覧表示へ戻る", pictures_path, class: "btn btn-primary" %>
+  <br><br>
 <% end %>

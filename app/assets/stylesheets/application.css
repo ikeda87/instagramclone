@@ -10,6 +10,11 @@
    position: absolute; top:0px;
   }
 
+  .sign_up-login-form {
+    background-color: #00ffCC;
+    word-wrap: break-word;
+  }
+
  .application_body {
    height: 0px;
    text-align: center;
