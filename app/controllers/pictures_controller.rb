@@ -23,15 +23,17 @@ class PicturesController < ApplicationController
 
   def create
     @picture = current_user.pictures.build(picture_params)
-
-    respond_to do |format|
+    # respond_to do |format|
       if @picture.save
-        format.html { redirect_to @picture, notice: '作成されました。' }
+        # format.html { redirect_to @picture, notice: '作成されました。' }
+        redirect_to picture_path(@picture.id)
+        #指定したページにリダイレクト
+        # redirect_to(リダイレクト先のパス [, status: ステイタスコード, オプション])
         PictureMailer.picture_mail(@picture).deliver
       else
-        format.html { render :new }
+        render :new
       end
-    end
+    # end
   end
 
   def update
