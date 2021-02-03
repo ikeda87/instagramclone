@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
       if @user.save
-        redirect_to new_session_path
+        redirect_to new_session_path, notice: "ログインしてください"
       else
-        render :new
+        render :new, notice: "失敗しました。"
       end
   end
 
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       if @user.update(update_params)
         format.html { redirect_to @user, notice: 'アップデートされました。' }
       else
-        format.html { render :edit }
+        format.html { render :edit, notice: "失敗しました。" }
       end
     end
   end
@@ -64,8 +64,8 @@ class UsersController < ApplicationController
 
   def check_current_user
   user = User.find(params[:id])
-  if user.id != params[:id].to_i
-    redirect_to new_user_path, notice: "この操作はできません"
-  end
+   if user.id != params[:id].to_i
+    redirect_to new_user_path, notice: "この操作はできません。"
+   end
   end
 end
