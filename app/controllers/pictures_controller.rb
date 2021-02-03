@@ -29,7 +29,7 @@ class PicturesController < ApplicationController
         redirect_to picture_path(@picture.id)
         #指定したページにリダイレクト
         # redirect_to(リダイレクト先のパス [, status: ステイタスコード, オプション])
-        PictureMailer.picture_mail(@picture).deliver
+        # PictureMailer.picture_mail(@picture).deliver
       else
         render :new
       end
