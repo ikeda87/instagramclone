@@ -1,13 +1,10 @@
 <h1 class="users_show_h1"><%= @user.name %>さんのページ</h1>
-
   <p>メールアドレス: <%= @user.email %></p>
-
 <% if @user.profile_image.present? %>
   <%= image_tag @user.profile_image.url %>
   <% else %>
-  <p>プロフィール画像を登録してください。</p>
+    <p>プロフィール画像を登録してください。</p>
   <% end %>
-
 <div class="profile_button">
   <% if current_user.id == @user.id %>
     <button><%= link_to 'プロフィール編集', edit_user_path %></button>
@@ -17,5 +14,5 @@
     <% end %>
 </div>
 <br>
-<%= link_to "一覧表示へ戻る", pictures_path, class: "btn btn-primary" %>
+  <%= link_to "一覧表示へ戻る", pictures_path, class: "btn btn-primary" %>
 <br>
